@@ -1,0 +1,2301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
+
+$mont: "Montserrat";
+$black: #000000;
+$navy: #20113d;
+$white: #ffffff;
+$orange: #f58021;
+$orange_black: #d26004;
+$turquoise: #00a092;
+$grey: #969696;
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.move-aside-menu {
+  transform: translateX(-300px);
+}
+
+.hide-menu {
+  display: none;
+}
+
+.aside_open {
+  left: -300px;
+}
+
+.move-aside_open-menu {
+  transform: translateX(300px);
+}
+
+.header {
+  background-color: $orange;
+
+  .visually_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  }
+
+  .header__section {
+    height: 110px;
+    display: flex;
+    align-items: center;
+
+    .header__logo {
+      cursor: pointer;
+    }
+
+    .header__nav_map {
+      .header__ul_map {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 64px 0 503px;
+        width: 556px;
+
+        .header__li_map {
+          text-transform: uppercase;
+          cursor: pointer;
+          color: black;
+          font-weight: 600;
+          font-size: 18px;
+          font-family: $mont;
+        }
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        a:link:hover,
+        a:active:hover,
+        a:visited:hover {
+          color: $turquoise;
+        }
+
+        .header__active_link {
+          color: $turquoise;
+          cursor: default;
+        }
+      }
+    }
+
+    .header__social {
+      .header__social_ul {
+        width: 180px;
+        display: flex;
+        justify-content: space-between;
+
+        .header__social_li {
+          a {
+            div {
+              transition: transform 0.5s;
+              width: 40px;
+              height: 40px;
+            }
+
+            div:hover {
+              transform: rotate(360deg);
+            }
+            .header_logo_tube {
+              background-image: url(../../../../assets/icons/icons_tube.svg);
+            }
+            .header_logo_inst {
+              background-image: url(../../../../assets/icons/icons_inst.svg);
+            }
+            .header_logo_fb {
+              background-image: url(../../../../assets/icons/icons_fb.svg);
+            }
+          }
+        }
+      }
+    }
+
+    .header__menu {
+      display: none;
+
+      .hamburger_menu {
+        background-image: url(../../../../assets/icons/hamburger_menu.svg);
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.main__section_zoo {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  .section__aside_wrapper {
+    width: 220px;
+    position: absolute;
+    height: 1499px;
+    z-index: 11;
+    transition: all 0.5s;
+
+    .zoo__aside {
+      width: 212px;
+      height: 845px;
+      position: sticky;
+      top: 0px;
+
+      .zoo__aside_nav {
+        .aside__nav_ul {
+          display: flex;
+          flex-direction: column;
+
+          .nav__li_carousel {
+            overflow: hidden;
+            width: 212px;
+            height: 684px;
+
+            .nav__li_div-carousel {
+              width: 212px;
+              height: 1500px;
+              position: relative;
+              top: -1px;
+              transition: all 1s;
+
+              .aside__nav_div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .aside__nav_size {
+                  width: 110px;
+                  height: 110px;
+                }
+
+                .aside__nav_size-active {
+                  width: 120px;
+                  height: 120px;
+                }
+
+                .aside__nav_panda {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_panda.svg);
+                }
+
+                .aside__nav_eagle {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_white-circle_eagle.svg);
+                }
+
+                .aside__nav_gorilla {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_gorilla.svg);
+                }
+
+                .aside__nav_lemur {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_lemur.svg);
+                }
+
+                .aside__nav_tiger {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_tiger.svg);
+                }
+
+                .aside__nav_coala {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_coala.svg);
+                }
+
+                .aside__nav_croco {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_croco.svg);
+                }
+
+                .aside__nav_lion {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange-circle_lion.svg);
+                }
+              }
+            }
+          }
+
+          .nav__arrow_bottom {
+            background-color: $navy;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .aside__arrow_bottom {
+              background-image: url(../../../../assets/icons/zoo-page/aside_single_arrow.svg);
+              width: 15px;
+              height: 9px;
+              cursor: pointer;
+            }
+
+            .half-opacity {
+              opacity: 0.5;
+              user-select: none;
+              cursor: auto;
+            }
+          }
+
+          .nav_camera {
+            background-color: $navy;
+            height: 170px;
+            border-bottom: 1px solid $white;
+          }
+
+          .nav_top {
+            background-color: $navy;
+            height: 80px;
+            border-bottom: 1px solid $white;
+
+            .nav__arrows_top {
+              background-image: url(../../../../assets/icons/zoo-page/aside_arrows.svg);
+              width: 16px;
+              height: 15px;
+              position: relative;
+              left: 80%;
+              bottom: 10%;
+              cursor: pointer;
+            }
+
+            .nav__arrow_cam {
+              width: 112px;
+              height: 38px;
+              border-bottom-right-radius: 5px;
+              background-color: $orange;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .arrow_span {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-family: $mont;
+                font-weight: 600;
+                color: $white;
+                padding-right: 10px;
+              }
+
+              .aside__arrows_img {
+                background-image: url(../../../../assets/icons/zoo-page/logo-cam.svg);
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section__aside_wrapper-open {
+    width: 300px;
+    position: absolute;
+    height: 1499px;
+    z-index: 11;
+    transition: all 0.5s;
+
+    .zoo__aside-open {
+      width: 300px;
+      height: 843px;
+      position: sticky;
+      top: 0px;
+
+      .zoo__aside_nav-open {
+        .aside__nav_ul-open {
+          display: flex;
+          flex-direction: column;
+
+          .nav__li_carousel-open {
+            overflow: hidden;
+            width: 300px;
+            height: 684px;
+
+            .nav__li_div-carousel-open {
+              width: 300px;
+              height: 1500px;
+              position: relative;
+              top: -1px;
+              transition: all 1s;
+
+              .aside__nav_div-open > p {
+                width: 169px;
+                color: $white;
+                font-size: 18px;
+                font-family: $mont;
+                font-weight: 400;
+                line-height: 150%;
+              }
+
+              .aside__nav_div-open {
+                display: flex;
+                align-items: center;
+
+                .aside__nav_panda-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_panda.svg);
+                  width: 68px;
+                  height: 50px;
+                  margin-right: 17px;
+                  margin-bottom: 10px;
+                  margin-left: 26px;
+                }
+
+                .aside__nav_eagle-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_white_eagle.svg);
+                  width: 54px;
+                  height: 50px;
+                  margin-left: 32px;
+                  margin-right: 27px;
+                }
+
+                .aside__nav_gorilla-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_gorilla.svg);
+                  width: 58px;
+                  height: 50px;
+                  margin-left: 30px;
+                  margin-right: 25px;
+                }
+
+                .aside__nav_lemur-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_lemur.svg);
+                  width: 30px;
+                  height: 51px;
+                  margin-left: 44px;
+                  margin-right: 39px;
+                }
+
+                .aside__nav_tiger-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_tiger.svg);
+                  width: 56px;
+                  height: 52px;
+                  margin-left: 30px;
+                  margin-right: 27px;
+                }
+
+                .aside__nav_coala-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_coala.svg);
+                  width: 45px;
+                  height: 56px;
+                  margin-left: 37px;
+                  margin-right: 32px;
+                }
+
+                .aside__nav_croco-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_croco.svg);
+                  width: 60px;
+                  height: 48px;
+                  margin-left: 30px;
+                  margin-right: 25px;
+                }
+
+                .aside__nav_lion-open {
+                  background-image: url(../../../../assets/icons/zoo-page/aside_orange_lion.svg);
+                  width: 53px;
+                  height: 47px;
+                  margin-left: 30px;
+                  margin-right: 30px;
+                }
+              }
+            }
+          }
+
+          .nav__arrow_bottom-open {
+            width: 300px;
+            background-color: $navy;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .aside__arrow_bottom-open {
+              background-image: url(../../../../assets/icons/zoo-page/aside_single_arrow.svg);
+              width: 15px;
+              height: 9px;
+              cursor: pointer;
+            }
+
+            .half-opacity-open {
+              opacity: 0.5;
+              user-select: none;
+              cursor: auto;
+            }
+          }
+
+          .nav_height-open {
+            background-color: $navy;
+            height: 170px;
+            border-bottom: 1px solid $white;
+          }
+
+          .nav_top-open {
+            width: 300px;
+            background-color: $navy;
+            height: 74px;
+            border-bottom: 1px solid $white;
+
+            .nav__arrows_top-open {
+              background-image: url(../../../../assets/icons/zoo-page/aside_arrows-open.svg);
+              width: 16px;
+              height: 15px;
+              position: relative;
+              left: 80%;
+              bottom: 10%;
+              cursor: pointer;
+            }
+
+            .nav__arrow_cam-open {
+              width: 112px;
+              height: 38px;
+              border-bottom-right-radius: 5px;
+              background-color: $orange;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .arrow_span-open {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-family: $mont;
+                font-weight: 600;
+                color: $white;
+                padding-right: 10px;
+              }
+
+              .aside__arrows_img-open {
+                background-image: url(../../../../assets/icons/zoo-page/logo-cam.svg);
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .zoo__header {
+    display: flex;
+    flex-direction: column;
+
+    .header_div {
+      display: flex;
+      margin: 50px 0 46px 0;
+      justify-content: flex-end;
+
+      .zoo_h2 {
+        font-size: 54px;
+        font-family: $mont;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $turquoise;
+        padding-top: 7px;
+      }
+
+      .zoo__button {
+        margin-left: 203px;
+        width: 246px;
+        height: 74px;
+        border-radius: 5px;
+        border: none;
+        text-transform: uppercase;
+        font-family: $mont;
+        font-weight: 600;
+        font-size: 18px;
+        color: $white;
+        background-color: $orange;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        .zoo__button_arrow {
+          background-image: url(../../../../assets/icons/arrow-white_right.svg);
+          width: 24px;
+          height: 22px;
+          padding-left: 3px;
+          margin-left: 10px;
+        }
+      }
+
+      .zoo__button:hover {
+        background: $orange_black;
+        box-shadow: 0px 4px 30px rgba(245, 128, 33, 0.3);
+      }
+
+      .zoo__button:focus {
+        outline: none;
+        background: $orange_black;
+        box-shadow: 0px 4px 30px rgba(245, 128, 33, 0.3);
+      }
+    }
+
+    .main__zoo_video {
+      .iframe__camera-num {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .iframe {
+          width: 1400px;
+          height: 787px;
+        }
+
+        .iframe__camera-num_text {
+          font-family: $mont;
+          font-weight: 500;
+          font-size: 26px;
+          color: $white;
+          position: absolute;
+          top: 50px;
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  .zoo_h3 {
+    font-size: 42px;
+    font-family: $mont;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $black;
+    padding-top: 100px;
+    text-align: center;
+    margin-right: 11px;
+  }
+
+  .zoo_cameras {
+    display: flex;
+    height: 209px;
+    padding-top: 34px;
+    padding-bottom: 150px;
+    align-items: center;
+    margin-left: 167px;
+
+    .zoo__cameras_arrow-left {
+      background-image: url(../../../../assets/icons/arrow-black_left.svg);
+      cursor: pointer;
+      width: 27px;
+      height: 22px;
+      margin-right: 37px;
+    }
+
+    .zoo__cameras_arrow-right {
+      background-image: url(../../../../assets/icons/arrow-black_right.svg);
+      cursor: pointer;
+      width: 27px;
+      height: 22px;
+    }
+    .zoo__cameras_arrow-left:hover {
+      background-image: url(../../../../assets/icons/arrow-orange_left.svg);
+    }
+
+    .zoo__cameras_arrow-right:hover {
+      background-image: url(../../../../assets/icons/arrow-orange_right.svg);
+    }
+
+    .zoo__camera_animal {
+      border-radius: 8px;
+      width: 320px;
+      height: 209px;
+      border: 2px solid $white;
+      margin-right: 37px;
+
+      .iframe_video {
+        width: 320px;
+        height: 209px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7px;
+        background: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+
+        iframe {
+          z-index: -1;
+        }
+      }
+
+      .zoo_cam {
+        width: 189px;
+        height: 44px;
+        border: 1px solid $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px 0 5px 0;
+        position: absolute;
+        z-index: 10;
+
+        .zoo__cam_span {
+          font-size: 26px;
+          font-family: $mont;
+          font-weight: 500;
+          text-transform: uppercase;
+          align-items: center;
+          color: $white;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .hidden_class {
+      display: block;
+    }
+
+    .zoo__camera_animal:hover {
+      border-color: $orange;
+    }
+  }
+}
+
+.main__section_donate {
+  background-color: $navy;
+
+  .section__donate {
+    display: flex;
+    justify-content: space-between;
+
+    .donate__information {
+      .donate__header_h3 {
+        text-transform: uppercase;
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 42px;
+        color: $white;
+        padding: 56px 0 28px 0;
+      }
+
+      .donate__p {
+        width: 909px;
+        font-family: $mont;
+        font-size: 18px;
+        color: $white;
+        font-weight: 400;
+        line-height: 150%;
+        padding-bottom: 46px;
+      }
+    }
+  }
+
+  .donate__p_button {
+    color: $white;
+    font-family: $mont;
+    font-weight: 500;
+    font-size: 26px;
+    padding: 58px 0 14px 2px;
+  }
+
+  .donate__button_content {
+    display: flex;
+    border: 1px solid $white;
+    border-radius: 5px;
+    align-items: center;
+
+    .donate_span {
+      color: $white;
+      font-family: $mont;
+      font-weight: 600;
+      font-size: 18px;
+      padding-left: 15px;
+    }
+
+    .input__donate {
+      width: 204px;
+      height: 71px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $navy;
+      color: $white;
+      border: 0;
+      outline: none;
+      border-radius: 5px;
+      color: $white;
+      font-family: $mont;
+      font-weight: 600;
+      font-size: 18px;
+      padding-left: 5px;
+    }
+
+    .input__donate::placeholder {
+      text-transform: uppercase;
+      color: $white;
+      font-family: $mont;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .input__donate::-webkit-outer-spin-button,
+    .input__donate::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .donate__btn {
+      width: 80px;
+      height: 71px;
+      border-radius: 5px;
+      background-color: $orange;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .donate__btn_arrow {
+        background-image: url(../../../../assets/icons/arrow-white_right.svg);
+        width: 26px;
+        height: 22px;
+      }
+    }
+
+    .donate__btn:hover {
+      background-color: $orange_black;
+    }
+  }
+}
+
+.main__section_info {
+  .section__info_header {
+    width: 1040px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    margin: 151px 240px;
+
+    .info_h3 {
+      text-transform: uppercase;
+      font-family: $mont;
+      font-weight: 500;
+      font-size: 42px;
+      color: $turquoise;
+      padding: 53px 0 24px 336px;
+    }
+
+    .info_p {
+      font-family: $mont;
+      font-weight: 500;
+      font-size: 26px;
+      color: $black;
+      text-align: center;
+      width: 919px;
+      margin: 0 auto;
+      line-height: 131%;
+      padding-bottom: 53px;
+    }
+  }
+
+  .section__info_desc {
+    display: flex;
+
+    .info__desc_container {
+      width: 720px;
+
+      .container_desc {
+        display: flex;
+        margin-bottom: 32px;
+        align-items: center;
+
+        .desc_name {
+          font-family: $mont;
+          font-weight: 500;
+          font-size: 26px;
+          color: $black;
+        }
+
+        .desc_info {
+          font-family: $mont;
+          font-weight: 400;
+          font-size: 18px;
+          color: $black;
+          padding-left: 20px;
+          height: 26px;
+          line-height: 30px;
+        }
+
+        .card__span {
+          width: 390px;
+          height: 84px;
+          font-size: 18px;
+          color: $white;
+          font-family: $mont;
+          font-weight: 400;
+          line-height: 150%;
+          margin-top: 30px;
+        }
+
+        .map__btn_a {
+          margin-left: 13px;
+        }
+
+        .map__btn_a:link {
+          text-decoration: none;
+        }
+        .map__btn {
+          width: 240px;
+          height: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $orange;
+          cursor: pointer;
+
+          .btn__span {
+            font-size: 18px;
+            font-family: $mont;
+            font-weight: 400;
+            line-height: 22px;
+            text-transform: uppercase;
+            margin: 0 20px 0 16px;
+          }
+
+          .btn__arrow {
+            background-image: url(../../../../assets/icons/arrow-orange_right.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 26px;
+            height: 33px;
+          }
+        }
+
+        .map__btn:hover {
+          background-color: $orange;
+          color: $white;
+          border-radius: 5px;
+
+          .btn__arrow {
+            background-image: url(../../../../assets/icons/arrow-white_right.svg);
+          }
+        }
+      }
+
+      .desc_margins_01 {
+        margin-bottom: 27px;
+      }
+
+      .desc_margins_0 {
+        margin-bottom: 0;
+      }
+    }
+
+    .info__desc_img {
+      width: 440px;
+      height: 440px;
+    }
+  }
+
+  .info__desc_p {
+    width: 1160px;
+    font-size: 18px;
+    font-family: $mont;
+    font-weight: 400;
+    line-height: 27px;
+    color: $black;
+    padding: 48px 0 150px 0;
+  }
+}
+
+.footer {
+  height: 329px;
+  background-color: $navy;
+
+  .footer__nav {
+    height: 214px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer__nav_school {
+      .nav__school_ul {
+        display: flex;
+        width: 414px;
+        justify-content: space-between;
+      }
+    }
+
+    .footer__nav_map {
+      .nav__map_ul {
+        text-transform: uppercase;
+        display: flex;
+        width: 425px;
+        justify-content: space-between;
+        font-size: 18px;
+        font-family: $mont;
+        font-weight: 600;
+        color: $white;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+
+        a:link:hover,
+        a:active:hover,
+        a:visited:hover {
+          color: $turquoise;
+        }
+      }
+    }
+
+    .footer__btn {
+      width: 356px;
+      height: 73px;
+      border: 1px solid $white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: $white;
+
+      .footer__btn_span {
+        font-size: 18px;
+        font-family: $mont;
+        font-weight: 600;
+        line-height: 22px;
+        text-transform: uppercase;
+      }
+
+      .footer__btn_right-arrow {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 38px;
+        height: 33px;
+        background-image: url(../../../../assets/icons/arrow-white_right.svg);
+      }
+    }
+
+    .footer__btn:hover {
+      background-color: $turquoise;
+      color: $white;
+
+      .footer__btn_right-arrow {
+        background-image: url(../../../../assets/icons/arrow-white_right.svg);
+      }
+    }
+  }
+
+  .footer_line {
+    border-top: 1px solid $white;
+  }
+
+  .footer__authors {
+    display: flex;
+    justify-content: space-between;
+    height: 114px;
+    align-items: center;
+
+    .footer_auth_ul {
+      display: flex;
+      color: $white;
+      font-family: $mont;
+      font-weight: 400;
+      font-size: 18px;
+      width: 448px;
+      justify-content: space-between;
+    }
+
+    .footer__social {
+      .footer__social_ul {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+
+        .footer__social_li {
+          a {
+            div {
+              transition: transform 0.5s;
+              width: 40px;
+              height: 40px;
+            }
+
+            div:hover {
+              transform: rotate(360deg);
+            }
+            .footer_logo_tube {
+              background-image: url(../../../../assets/icons/icons_tube.svg);
+            }
+            .footer_logo_inst {
+              background-image: url(../../../../assets/icons/icons_inst.svg);
+            }
+            .footer_logo_fb {
+              background-image: url(../../../../assets/icons/icons_fb.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1830px) {
+  .main__section_zoo {
+    max-width: 1300px;
+
+    .section__aside_wrapper {
+      left: 0;
+
+      .zoo__aside {
+        width: 150px;
+
+        .zoo__aside_nav {
+          .aside__nav_ul {
+            .nav__li_carousel {
+              width: 150px;
+
+              .nav__li_div-carousel {
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    width: 1000px;
+  }
+
+  .header {
+    .header__section {
+      .header__nav_map {
+        .header__ul_map {
+          width: 481px;
+          padding: 0 80px 0 164px;
+        }
+      }
+    }
+  }
+
+  .main__section_zoo {
+    width: 1200px;
+
+    .section__aside_wrapper {
+      width: auto;
+      margin: 0;
+      height: 1287px;
+
+      .zoo__aside {
+        width: 115px;
+
+        .zoo__aside_nav {
+          .aside__nav_ul {
+            .nav_top {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .nav__arrow_cam {
+                display: none;
+              }
+
+              .nav__arrows_top {
+                position: inherit;
+              }
+            }
+
+            .nav__li_carousel {
+              width: 115px;
+
+              .nav__li_div-carousel {
+                width: 115px;
+
+                .aside__nav_div {
+                  .aside__nav_eagle {
+                    background-image: url(../../../../assets/icons/zoo-page/respons/res_aside_white_eagle.svg);
+                    width: 43px;
+                    height: 40px;
+                  }
+
+                  .aside__nav_gorilla {
+                    background-image: url(../../../../assets/icons/zoo-page/respons/res_aside_orange_gorilla.svg);
+                    width: 45px;
+                    height: 40px;
+                  }
+
+                  .aside__nav_panda {
+                    background-image: url(../../../../assets/icons/zoo-page/respons/res_aside_orange_panda.svg);
+                    width: 53px;
+                    height: 40px;
+                  }
+
+                  .aside__nav_lemur {
+                    background-image: url(../../../../assets/icons/zoo-page/respons/res_aside_orange_lemur.svg);
+                    width: 24px;
+                    height: 40px;
+                  }
+
+                  .aside__nav_tiger {
+                    background-image: url(../../../../assets/icons/zoo-page/aside_orange_tiger.svg);
+                    width: 67px;
+                    height: 52px;
+                  }
+
+                  .aside__nav_coala {
+                    background-image: url(../../../../assets/icons/zoo-page/aside_orange_coala.svg);
+                    width: 45px;
+                    height: 56px;
+                  }
+
+                  .aside__nav_croco {
+                    background-image: url(../../../../assets/icons/zoo-page/aside_orange_croco.svg);
+                    width: 60px;
+                    height: 48px;
+                  }
+
+                  .aside__nav_lion {
+                    background-image: url(../../../../assets/icons/zoo-page/aside_orange_lion.svg);
+                    width: 53px;
+                    height: 47px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section__aside_wrapper-open {
+      height: 1290px;
+    }
+
+    .container {
+      margin-left: 160px;
+
+      .zoo__header {
+        .header_div {
+          justify-content: flex-end;
+          margin: 35px 0 34px 0;
+
+          .zoo_h2 {
+            padding: 0;
+          }
+
+          .zoo__button {
+            margin-left: 58px;
+            width: 238px;
+            height: 57px;
+          }
+        }
+
+        .main__zoo_video {
+          .iframe__camera-num {
+            .iframe {
+              width: 1026px;
+              height: 760px;
+              margin-left: -25px;
+            }
+          }
+        }
+      }
+
+      .zoo_h3 {
+        margin: 13px 32px 0 0;
+        padding: 0;
+      }
+
+      .zoo_cameras {
+        height: 209px;
+        padding-top: 33px;
+        padding-bottom: 99px;
+        margin: 0;
+
+        .zoo__cameras_arrow-left {
+          margin: 0 37px 19px 0;
+        }
+
+        .zoo__cameras_arrow-right {
+          margin: 0 0 19px 21px;
+        }
+
+        .zoo__camera_animal {
+          width: 269px;
+          height: 205px;
+          margin-right: 14px;
+
+          .zoo_cam {
+            justify-content: end;
+            width: 163px;
+            height: 40px;
+
+            .zoo__cam_span {
+              padding: 0 11px 0 13px;
+            }
+          }
+
+          .iframe_video {
+            width: 267px;
+            height: 205px;
+          }
+        }
+      }
+    }
+  }
+
+  .main__section_donate {
+    height: 283px;
+
+    .container {
+      width: 1120px;
+
+      .section__donate {
+        .donate__information {
+          .donate__header_h3 {
+            width: 505px;
+            padding: 33px 0 12px;
+            line-height: 51px;
+          }
+
+          .donate__p {
+            width: 725px;
+            padding: 0;
+          }
+        }
+
+        .donate__p_button {
+          padding: 34px 0 14px 2px;
+        }
+      }
+    }
+  }
+
+  .main__section_info {
+    height: 1272px;
+
+    .container {
+      width: 1120px;
+
+      .section__info_header {
+        width: 930px;
+        margin: 101px 36px 104px 95px;
+        height: 369px;
+
+        .info_h3 {
+          padding: 35px 0 24px 301px;
+        }
+
+        .info_p {
+          margin: 0 0 0 95px;
+          width: 740px;
+        }
+      }
+
+      .section__info_desc {
+        .info__desc_container {
+          width: 665px;
+
+          .container_desc {
+            .map__btn_a {
+              .map__btn {
+                .btn__span {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+
+          .desc_margins_001 {
+            margin-bottom: 26px;
+          }
+        }
+
+        .info__desc_img {
+          width: 456px;
+          height: 457px;
+          position: relative;
+          bottom: 5px;
+        }
+      }
+
+      .info__desc_p {
+        width: 1120px;
+        padding: 36px 0 0;
+      }
+    }
+  }
+
+  .footer {
+    .container {
+      margin: 0;
+      width: 100%;
+
+      .footer__nav {
+        height: 214px;
+        padding: 0 40px;
+
+        .footer__nav_school {
+          .nav__school_ul {
+            width: 343px;
+          }
+        }
+
+        .footer__nav_map {
+          .nav__map_ul {
+            width: 346px;
+            padding: 0 35px;
+          }
+        }
+      }
+
+      .footer__authors {
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 600px;
+  }
+
+  .header {
+    .header__section {
+      justify-content: space-between;
+
+      .header__nav_map {
+        display: none;
+      }
+
+      .header__social {
+        display: none;
+      }
+
+      .header__menu {
+        display: block;
+        padding-right: 27px;
+      }
+    }
+  }
+
+  .main__section_zoo {
+    width: 640px;
+
+    .section__aside_wrapper {
+      width: auto;
+      margin: 0;
+      height: 890px;
+
+      .zoo__aside {
+        width: 78px;
+
+        .zoo__aside_nav {
+          .aside__nav_ul {
+            .nav_top {
+              height: 49px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .nav__arrow_cam {
+                display: none;
+              }
+
+              .nav__arrows_top {
+                position: inherit;
+              }
+            }
+
+            .nav__li_carousel {
+              width: 78px;
+
+              .nav__li_div-carousel {
+                width: 78px;
+
+                .aside__nav_div {
+                  .aside__nav_eagle {
+                    width: 32px;
+                    height: 32px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_gorilla {
+                    width: 34px;
+                    height: 30px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_panda {
+                    width: 40px;
+                    height: 30px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_lemur {
+                    width: 18px;
+                    height: 30px;
+                    background-size: cover;
+                  }
+                }
+              }
+            }
+
+            .nav__arrow_bottom {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .section__aside_wrapper-open {
+      width: 233px;
+      height: 830px;
+
+      .zoo__aside-open {
+        width: 233px;
+        height: 830px;
+
+        .zoo__aside_nav-open {
+          .aside__nav_ul-open {
+            .nav_top-open {
+              width: 233px;
+            }
+
+            .nav__arrow_bottom-open {
+              width: 233px;
+            }
+
+            .nav__li_carousel-open {
+              width: 233px;
+
+              .nav__li_div-carousel-open {
+                width: 233px;
+
+                .aside__nav_div-open > p {
+                  width: 150px;
+                  margin-right: 10px;
+                }
+
+                .aside__nav_div-open {
+                  .aside__nav_panda-open {
+                    width: 40px;
+                    height: 30px;
+                    margin-right: 21px;
+                    margin-bottom: 10px;
+                    margin-left: 15px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_eagle-open {
+                    width: 32px;
+                    height: 30px;
+                    margin-left: 19px;
+                    margin-right: 26px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_gorilla-open {
+                    width: 37px;
+                    height: 32px;
+                    margin-left: 30px;
+                    margin-right: 25px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_lemur-open {
+                    width: 23px;
+                    height: 38px;
+                    margin-left: 31px;
+                    margin-right: 26px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_tiger-open {
+                    width: 48px;
+                    height: 45px;
+                    margin-left: 12px;
+                    margin-right: 23px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_coala-open {
+                    width: 36px;
+                    height: 41px;
+                    margin-left: 26px;
+                    margin-right: 24px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_croco-open {
+                    width: 51px;
+                    height: 40px;
+                    margin-left: 16px;
+                    margin-right: 21px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_lion-open {
+                    width: 43px;
+                    height: 35px;
+                    margin-left: 22px;
+                    margin-right: 23px;
+                    background-size: cover;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      margin-left: 87px;
+      width: 533px;
+
+      .zoo__header {
+        width: 533px;
+
+        .header_div {
+          justify-content: end;
+          margin: 31px 0 25px 52px;
+
+          .zoo_h2 {
+            padding: 0;
+            font-size: 42px;
+          }
+
+          .zoo__button {
+            width: 213px;
+            height: 48px;
+            top: 629px;
+            left: 408px;
+            position: absolute;
+            margin: 0;
+          }
+        }
+
+        .main__zoo_video {
+          .iframe__camera-num {
+            .iframe__camera-num_text {
+              top: 15px;
+              left: 13px;
+            }
+
+            .iframe {
+              width: 543px;
+              height: 403px;
+              margin-left: -10px;
+            }
+          }
+        }
+      }
+
+      .zoo_h3 {
+        text-transform: none;
+        font-size: 26px;
+        margin: 87px 0 0 85px;
+        text-align: left;
+      }
+
+      .zoo_cameras {
+        height: 168px;
+        padding: 0px 0px 42px 87px;
+        margin: 0;
+
+        .zoo__cameras_arrow-left {
+          display: none;
+        }
+
+        .zoo__cameras_arrow-right {
+          display: none;
+        }
+
+        .zoo__camera_animal {
+          width: 135px;
+          height: 120px;
+          margin-right: 15px;
+
+          .zoo_cam {
+            justify-content: end;
+            width: 163px;
+            height: 40px;
+            top: 742px;
+            transform: scale(0.44);
+            margin-left: -46px;
+
+            .zoo__cam_span {
+              padding: 0 11px 0 13px;
+            }
+          }
+
+          .iframe_video {
+            width: 134px;
+            height: 106px;
+          }
+        }
+      }
+    }
+  }
+
+  .main__section_donate {
+    height: 515px;
+
+    .container {
+      width: 600px;
+
+      .section__donate {
+        flex-direction: column;
+        align-items: center;
+
+        .donate__information {
+          .donate__header_h3 {
+            padding: 51px 0 30px 49px;
+            text-align: center;
+          }
+
+          .donate__p {
+            text-align: center;
+            width: 599px;
+          }
+        }
+
+        .donate__p_button {
+          padding: 34px 0px 13px 89px;
+        }
+
+        .donate__button_content {
+          .donate_span {
+            padding-left: 35px;
+          }
+
+          .input__donate {
+            width: 233px;
+            height: 68px;
+          }
+
+          .donate__btn {
+            width: 73px;
+            height: 71px;
+          }
+        }
+      }
+    }
+  }
+
+  .main__section_info {
+    height: 2173px;
+
+    .container {
+      width: 600px;
+
+      .section__info_header {
+        width: 600px;
+        margin: 70px 0 79px 0;
+        height: 506px;
+
+        .info_h3 {
+          padding: 40px 0 24px 111px;
+        }
+
+        .info_p {
+          margin: 10px 0 0 31px;
+          width: 540px;
+          height: 506px;
+        }
+      }
+
+      .section__info_desc {
+        flex-direction: column-reverse;
+
+        .info__desc_container {
+          width: 620px;
+          margin-top: 79px;
+
+          .container_desc {
+            .map__btn_a {
+              .map__btn {
+                .btn__span {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        .info__desc_img {
+          width: 601px;
+          height: 600px;
+        }
+      }
+
+      .info__desc_p {
+        width: 600px;
+        padding: 19px 0 0;
+      }
+    }
+  }
+
+  .footer {
+    height: 545px;
+
+    .container {
+      .footer__nav {
+        flex-direction: column;
+        height: 346px;
+
+        .footer__nav_school {
+          width: 446px;
+          margin-top: 50px;
+
+          .nav__school_ul {
+            width: 446px;
+          }
+        }
+
+        .footer__nav_map {
+          margin: 50px 0;
+
+          .nav__map_ul {
+            width: 446px;
+            padding: 0;
+          }
+        }
+
+        .footer__btn {
+          margin-bottom: 50px;
+        }
+      }
+
+      .footer_line {
+        margin-bottom: 50px;
+      }
+
+      .footer__authors {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+
+        .footer__social {
+          margin: 0 0 35px 0;
+
+          .footer__social_ul {
+            width: 222px;
+          }
+        }
+
+        .footer_auth_ul {
+          width: 446px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+  }
+
+  main {
+    padding-top: 110px;
+
+    .main__section_zoo {
+      .section__aside_wrapper {
+        .zoo__aside {
+          top: 110px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    width: 300px;
+  }
+
+  .header {
+    .header__section {
+      .header__logo {
+        margin-left: 11px;
+      }
+
+      .header__menu {
+        padding-right: 26px;
+        padding: 0 26px 2px 0;
+
+        .hamburger_menu {
+          width: 22px;
+        }
+      }
+    }
+  }
+
+  .main__section_zoo {
+    width: 320px;
+
+    .section__aside_wrapper {
+      width: auto;
+      margin: 0;
+      height: 582px;
+
+      .zoo__aside {
+        width: 50px;
+        height: 300px;
+
+        .zoo__aside_nav {
+          .aside__nav_ul {
+            .nav_top {
+              height: 49px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .nav__arrow_cam {
+                display: none;
+              }
+
+              .nav__arrows_top {
+                position: inherit;
+              }
+            }
+
+            .nav__li_carousel {
+              width: 50px;
+              height: 203px;
+
+              .nav__li_div-carousel {
+                width: 50px;
+
+                .aside__nav_div {
+                  height: 50px;
+
+                  .aside__nav_eagle {
+                    width: 21px;
+                    height: 20px;
+                  }
+
+                  .aside__nav_gorilla {
+                    width: 22px;
+                    height: 20px;
+                  }
+
+                  .aside__nav_panda {
+                    width: 26px;
+                    height: 20px;
+                  }
+
+                  .aside__nav_lemur {
+                    width: 12px;
+                    height: 20px;
+                  }
+
+                  .aside__nav_tiger {
+                    width: 28px;
+                    height: 23px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_coala {
+                    width: 23px;
+                    height: 29px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_croco {
+                    width: 25px;
+                    height: 21px;
+                    background-size: cover;
+                  }
+
+                  .aside__nav_lion {
+                    width: 22px;
+                    height: 20px;
+                    background-size: cover;
+                  }
+                }
+              }
+            }
+
+            .nav__arrow_bottom {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .section__aside_wrapper-open {
+      height: 582px;
+
+      .zoo__aside-open {
+        height: 304px;
+        top: 110px;
+
+        .zoo__aside_nav-open {
+          .aside__nav_ul-open {
+            .nav_top-open {
+              height: 50px;
+
+              .nav__arrow_cam-open {
+                height: 27px;
+              }
+            }
+
+            .nav__arrow_bottom-open {
+              height: 50px;
+            }
+
+            .nav__li_carousel-open {
+              height: 203px;
+
+              .nav__li_div-carousel-open {
+                .nav_height-open {
+                  height: 50px;
+                }
+
+                .aside__nav_div-open > p {
+                  width: 157px;
+                  font-size: 12px;
+                  line-height: 120%;
+                  margin: 0;
+                }
+
+                .aside__nav_div-open {
+                  .aside__nav_panda-open {
+                    width: 26px;
+                    height: 20px;
+                    margin-right: 22px;
+                    margin-bottom: 0px;
+                    margin-left: 16px;
+                  }
+                  .aside__nav_eagle-open {
+                    width: 22px;
+                    height: 20px;
+                    margin-left: 18px;
+                    margin-right: 26px;
+                  }
+                  .aside__nav_gorilla-open {
+                    width: 23px;
+                    height: 20px;
+                    margin-left: 18px;
+                    margin-right: 25px;
+                  }
+                  .aside__nav_lemur-open {
+                    width: 15px;
+                    height: 26px;
+                    margin-left: 23px;
+                    margin-right: 29px;
+                  }
+                  .aside__nav_tiger-open {
+                    width: 37px;
+                    height: 30px;
+                    margin-left: 11px;
+                    margin-right: 20px;
+                  }
+                  .aside__nav_coala-open {
+                    width: 23px;
+                    height: 28px;
+                    margin-left: 19px;
+                    margin-right: 26px;
+                  }
+                  .aside__nav_croco-open {
+                    width: 29px;
+                    height: 24px;
+                    margin-left: 16px;
+                    margin-right: 24px;
+                  }
+                  .aside__nav_lion-open {
+                    width: 27px;
+                    height: 24px;
+                    margin-left: 19px;
+                    margin-right: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      margin-left: 50px;
+      width: 270px;
+
+      .zoo__header {
+        width: 270px;
+
+        .header_div {
+          margin: 22px 0 17px 2px;
+
+          .zoo_h2 {
+            font-size: 26px;
+          }
+
+          .zoo__button {
+            width: 300px;
+            height: 45px;
+            top: 597px;
+            left: 11px;
+          }
+        }
+
+        .main__zoo_video {
+          .iframe__camera-num {
+            .iframe__camera-num_text {
+              top: 5px;
+              left: 5px;
+              font-size: 15px;
+            }
+
+            .iframe {
+              width: 271px;
+              height: 199px;
+              margin-left: -1px;
+            }
+          }
+        }
+      }
+
+      .zoo_h3 {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin: 21px 0 0 37px;
+      }
+
+      .zoo_cameras {
+        height: 168px;
+        padding: 0px 0px 108px 0;
+        margin: 0;
+
+        .zoo__cameras_arrow-left {
+          display: none;
+        }
+
+        .zoo__cameras_arrow-right {
+          display: none;
+        }
+
+        .zoo__camera_animal {
+          width: 140px;
+          height: 120px;
+          margin-right: 17px;
+          position: relative;
+          left: -39px;
+
+          .zoo_cam {
+            width: 163px;
+            height: 43px;
+            top: -12px;
+          }
+
+          .iframe_video {
+            width: 138px;
+            height: 108px;
+          }
+        }
+
+        .hidden_class {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .main__section_donate {
+    height: 580px;
+
+    .container {
+      width: 300px;
+
+      .section__donate {
+        flex-direction: column;
+        align-items: center;
+
+        .donate__information {
+          .donate__header_h3 {
+            padding: 30px 0 24px 3px;
+            font-size: 26px;
+            width: 300px;
+            line-height: 32px;
+          }
+
+          .donate__p {
+            width: 300px;
+          }
+        }
+
+        .donate__p_button {
+          padding: 26px 0px 13px 60px;
+        }
+
+        .donate__button_content {
+          .donate_span {
+            padding-left: 19px;
+          }
+
+          .input__donate {
+            width: 203px;
+            height: 17px;
+          }
+
+          .donate__btn {
+            width: 58px;
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+
+  .main__section_info {
+    height: 2504px;
+
+    .container {
+      width: 300px;
+
+      .section__info_header {
+        width: 300px;
+        margin: 51px 0 55px 0;
+        height: 482px;
+
+        .info_h3 {
+          padding: 33px 0 24px 36px;
+          font-size: 26px;
+        }
+
+        .info_p {
+          margin: 3px 0 0 8px;
+          width: 285px;
+          height: inherit;
+          font-size: 18px;
+          line-height: 27px;
+          padding: 0;
+        }
+      }
+
+      .section__info_desc {
+        flex-direction: column-reverse;
+
+        .info__desc_container {
+          width: 300px;
+          margin-top: 48px;
+
+          .container_desc {
+            flex-direction: column;
+            align-items: end;
+            margin-bottom: 24px;
+
+            .desc_info {
+              padding: 9px 0 0;
+            }
+
+            .map__btn_a {
+              margin-top: 20px;
+
+              .map__btn {
+                .btn__span {
+                  margin: 0px 14px 0 35px;
+                }
+              }
+            }
+          }
+
+          .desc_margins_01 {
+            margin-bottom: 18px;
+          }
+
+          .desc_margins_001 {
+            margin-bottom: -6px;
+            margin-top: 42px;
+          }
+
+          .desc_margins_0 {
+            margin-top: 30px;
+            margin-bottom: 51px;
+          }
+        }
+
+        .info__desc_img {
+          width: 320px;
+          height: 320px;
+          left: -10px;
+        }
+      }
+
+      .info__desc_p {
+        width: 300px;
+        padding: 3px 0 0;
+      }
+    }
+  }
+
+  .footer {
+    height: 717px;
+
+    .container {
+      .footer__nav {
+        justify-content: end;
+        height: 386px;
+
+        .footer__nav_school {
+          width: 300px;
+
+          .nav__school_ul {
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+            height: 216px;
+          }
+        }
+
+        .footer__nav_map {
+          margin: 29px 0 0 0;
+
+          .nav__map_ul {
+            width: 300px;
+            font-size: 16px;
+            justify-content: space-between;
+          }
+        }
+
+        .footer__btn {
+          width: 300px;
+          height: 41px;
+          margin: 33px 0 0 0;
+
+          .footer__btn_span {
+            text-transform: none;
+          }
+        }
+      }
+
+      .footer_line {
+        position: relative;
+        top: 102px;
+        margin: 0;
+      }
+
+      .footer__authors {
+        margin-top: 33px;
+        height: 296px;
+
+        .footer_auth_ul {
+          width: 300px;
+          flex-direction: column;
+          align-items: center;
+          height: 191px;
+          justify-content: space-evenly;
+
+          .auth__w320 {
+            margin: 9px 0;
+          }
+        }
+      }
+    }
+  }
+}
